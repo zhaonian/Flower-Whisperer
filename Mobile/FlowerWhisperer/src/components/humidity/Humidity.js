@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, WebView } from 'react-native';
 
 class Humidity extends Component {
         render() {
@@ -8,6 +8,10 @@ class Humidity extends Component {
                                 <Text>
                                         Humidity
                                 </Text>
+                                <WebView
+                                        source={{ uri: 'http://flowerwhisperer.azurewebsites.net/' }}
+                                        style={{ marginTop: 20 }}
+                                />
                         </View>
                 );
         }
