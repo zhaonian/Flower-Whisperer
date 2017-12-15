@@ -42,21 +42,21 @@ class Humidity extends Component {
                                                 </Text>
                                                 <Text style={styles.degree}> %</Text>
                                         </View>
-                                        <View style={styles.notes}>
+                                        <View>
                                                 {
                                                         (this.props.humidity < 60) ?
-                                                                <View>
+                                                                <View style={styles.notes}>
                                                                         <Text>Humidity lower than 60 is not good for respiration</Text>
                                                                         <Text>Please move your plant to a humidier place</Text>
                                                                 </View>
                                                                 :
-                                                                (this.props.temperature > 80) ?
-                                                                        <View>
+                                                                (this.props.humidity > 80) ?
+                                                                        <View style={styles.notes}>
                                                                                 <Text>Humidity higher than 80 is not good for respiration</Text>
                                                                                 <Text>Please move your plant to a drier place</Text>
                                                                         </View>
                                                                         :
-                                                                        <View>
+                                                                        <View style={styles.notes}>
                                                                                 <Text>Humidity between 60 and 80 is the best for respiration</Text>
                                                                                 <Text>Good Job!</Text>
                                                                         </View>

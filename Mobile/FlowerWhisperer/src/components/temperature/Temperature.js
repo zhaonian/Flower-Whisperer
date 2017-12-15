@@ -56,21 +56,21 @@ class Temperature extends Component {
                                                         <Text style={styles.degree}> °C</Text>
                                                 </View>
                                         }
-                                        <View style={styles.notes}>
+                                        <View>
                                                 {
                                                         (this.props.temperature < 25) ?
-                                                                <View>
+                                                                <View style={styles.notes}>
                                                                         <Text>Temperature lower than 25 is not good for photosynthesis</Text>
                                                                         <Text>Please move your plant to a warmer place</Text>
                                                                 </View>
                                                                 :
                                                                 (this.props.temperature > 28) ?
-                                                                        <View>
+                                                                        <View style={styles.notes}>
                                                                                 <Text>Temperature higher than 28 is not good for photosynthesis</Text>
                                                                                 <Text>Please move your plant to a cooler place</Text>
                                                                         </View>
                                                                         :
-                                                                        <View>
+                                                                        <View style={styles.notes}>
                                                                                 <Text>Temperature between 25 and 28 is the best for photosynthesis</Text>
                                                                                 <Text>Good Job!</Text>
                                                                         </View>
