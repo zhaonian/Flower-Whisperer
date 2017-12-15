@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { Scene, Router } from 'react-native-router-flux';
-import { Brightness } from './components/brightness';
+import { Temperature } from './components/temperature';
+import { Profile } from './components/profile';
 import { Humidity } from './components/humidity';
-import { SunIcon, WaterIcon, InfoIcon } from './components/common/NavBar';
+import { TemperatureIcon, WaterIcon, InfoIcon } from './components/common/NavBar';
 
 
 class RouterComponent extends Component {
@@ -22,35 +23,23 @@ class RouterComponent extends Component {
                                                         tabBarPosition={'bottom'}
                                                 >
                                                         <Scene
-                                                                key='brightness'
-                                                                hideNavBar
-                                                                icon={SunIcon}
-                                                                component={Brightness}
+                                                                key='temperature'
+                                                                title='Temperature'
+                                                                icon={TemperatureIcon}
+                                                                component={Temperature}
                                                                 initial
                                                         />
                                                         <Scene
+                                                                key='notification'
+                                                                title='Profile'
+                                                                icon={InfoIcon}
+                                                                component={Profile}
+                                                        />
+                                                        <Scene
                                                                 key='humidity'
-                                                                hideNavBar
+                                                                title='Humidity'
                                                                 icon={WaterIcon}
                                                                 component={Humidity}
-                                                        />
-                                                        <Scene
-                                                                key='notification'
-                                                                hideNavBar
-                                                                icon={InfoIcon}
-                                                                component={Brightness}
-                                                        />
-                                                        <Scene
-                                                                key='search'
-                                                                hideNavBar
-                                                                icon={WaterIcon}
-                                                                component={Brightness}
-                                                        />
-                                                        <Scene
-                                                                key='bookmark'
-                                                                hideNavBar
-                                                                icon={SunIcon}
-                                                                component={Brightness}
                                                         />
                                                 </Scene>
                                         </Scene>

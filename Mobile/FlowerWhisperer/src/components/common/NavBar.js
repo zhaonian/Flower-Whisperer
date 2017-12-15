@@ -1,12 +1,11 @@
 import React from 'react';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const SunIcon = ({ focused }) => {
+const TemperatureIcon = ({ focused }) => {
         return (
-                <FontAwesomeIcon
-                        name='sun-o'
+                <MaterialCommunityIcon
+                        name='oil-temperature'
                         size={25}
                         color={focused ? 'orange' : 'black'}
                 />
@@ -33,4 +32,4 @@ const InfoIcon = ({ focused }) => {
         );
 };
 
-export { SunIcon, WaterIcon, InfoIcon };
+export { TemperatureIcon, WaterIcon, InfoIcon };
