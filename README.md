@@ -9,11 +9,12 @@ I'm following this [Sensor - Mobile App - Cloud](IoT-Architecture.jpeg) architec
 
 
 ## Specification
-* Mobile App: react-native
-* Cloud: Microsoft Azure
+* Mobile App:
+  * react-native
+* Cloud: 
+  * Microsoft Azure
+  * Express.js
 * Sensor: Arduino C
   * Arduino UNO
-  * SparkFun
-  * ?
-  * ?
+  * SparkFun esp8266
 
